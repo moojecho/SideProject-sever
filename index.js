@@ -1,8 +1,12 @@
 const express = require('express')
 const app = express()
 const port = 3001
-
+const mongoose = require('mongoose')
 var cors = require('cors')
+
+mongoose.connect('mongodb+srv://mooje:yr1004@visitcat0.iawkrmf.mongodb.net/?retryWrites=true&w=majority',
+{}).then(()=>console.log('Mongo DB Conneted...'))
+  .catch(err=>console.log(err))
 
 app.use(cors())
 
