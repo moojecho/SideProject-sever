@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const mapSchema = mongoose.Schema({
+    mapNum:{
+        type: String,
+        unique:1
+    },
     catNum:{
         type: Number
     },
