@@ -31,6 +31,16 @@ app.post("/catMap", (req, res) => {
   });
 });
 
+app.get("/catMap", (req, res) => {
+  const map = new Map(req.body);
+
+  Map.find(function(err, catInfo){
+    if(err) return res.status(500).send({error: 'database failure'});
+    res.json(catInfo);
+});
+  });
+
+
 app.get("/map", (req, res) => {
   res.json([
     {
