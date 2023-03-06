@@ -46,15 +46,11 @@ app.get("/map", (req, res) => {
   ]);
 });
 
-const datas = moongoose.model('maps',Map,'mapLists');
-
-datas.find(function(err,maps){
+Map.find(function(err,maps){
   if(err){
     console.log('error'+err);
   }else{
-    maps.forEach(function(row){
-      console.log('data'+row.title);
-    });
+    console.log(maps,'maps')
   }
 })
 
