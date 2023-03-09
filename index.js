@@ -40,22 +40,6 @@ app.get("/catMap", (req, res) => {
 });
   });
 
-
-app.get("/map", (req, res) => {
-  res.json([
-    {
-      mapNum: "map1",
-      catNum: 2,
-      catLocation: "중구 세종대로 110 서울특별시청",
-    },
-    {
-      mapNum: "map2",
-      catNum: 5,
-      catLocation: "강서구 금낭화로 23길 8 동성아파트",
-    },
-  ]);
-});
-
 Map.find(function(err,maps){
   if(err){
     console.log('error'+err);
@@ -63,14 +47,6 @@ Map.find(function(err,maps){
     console.log(maps,'maps')
   }
 })
-
-
-
-
-
-
-
-
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

@@ -13,6 +13,12 @@ const mapSchema = mongoose.Schema({
         trim:false,
         unique:1
     },
+    mapLocation1:{
+        type: Number
+    },
+    mapLocation2:{
+        type: Number
+    },
     image: String,
 })
 
